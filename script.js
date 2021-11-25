@@ -1,23 +1,19 @@
-$(function(){
 
-    $('button').click(function(){
-        // let result = $(".display").text();
-        // console.log(result);→OK
+function clickbutton(target){
+    let result = document.getElementById("display");
+    let input = target.innerHTML;
 
-        let value = $('.button').text();
-        console.log(value);
-    
-        if (value == "AC"){
-            console.log("oにする")
-            // result="0";
-        }else if(value == "="){
-            console.log("合計にする")
-            // result = eval(result);
+     if (input == "AC"){
+        result.innerHTML="0"
+     }else if(input == "="){
+        result.innerHTML = eval(result.innerHTML)
+     }else{
+        if(result.innerHTML == "0"){
+          result.innerHTML = input;
         }else{
-            console.log("計算式にして表示する")
-            // result += result;
+        result.innerHTML += input;
         }
-    });
-});
+     }
+}
 
 

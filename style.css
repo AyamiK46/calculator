@@ -13,7 +13,7 @@ table{
 }
 
 
-.display{
+#display{
     width: 270px;
     height: 70px;
     color:white;
@@ -31,17 +31,13 @@ button{
     font-weight:bold;
 }
 
-/* buttonの＝とAC部分のスタイル変更
-    width:130px;
-    height:50px;
-}
- */
-
 tr{
     width:270px;
     display:flex;
     justify-content: space-between;
 }
+
+
 
 
 

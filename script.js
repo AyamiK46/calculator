@@ -1,19 +1,38 @@
 
-function clickbutton(target){
-    let result = document.getElementById("display");
-    let input = target.innerHTML;
+let result = document.getElementById("display");
 
-     if (input == "AC"){
-        result.innerHTML="0"
-     }else if(input == "="){
-        result.innerHTML = eval(result.innerHTML)
-     }else{
-        if(result.innerHTML == "0"){
-          result.innerHTML = input;
-        }else{
-        result.innerHTML += input;
-        }
-     }
+function equal(){
+   result.innerHTML = eval(result.innerHTML);
 }
 
+function clear(){
+   result.innerHTML= "0";
+}
+
+function clickbutton(target){
+  let input = target.innerHTML;
+  if(result.innerHTML == "0"){
+     result.innerHTML = input;
+  }else{
+   result.innerHTML += input;
+  }
+}
+
+function edit(target){
+   let input = target.innerHTML;
+
+   if(result.innerHTML.slice(-1)=="-"){
+      return;
+   }else if(result.innerHTML.slice(-1)=="+"){
+      return;
+   }else if(result.innerHTML.slice(-1)=="*"){
+      return;
+   }else if(result.innerHTML.slice(-1)=="/"){
+      return;
+   }else if(result.innerHTML.slice(-1)=="."){
+      return;
+   }else{
+      result.innerHTML += input;
+   }
+}
 

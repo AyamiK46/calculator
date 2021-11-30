@@ -5,7 +5,7 @@ function equal(){
    result.innerHTML = eval(result.innerHTML);
 }
 
-function clear(){
+function reset(){
    result.innerHTML= "0";
 }
 
